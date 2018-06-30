@@ -52,6 +52,35 @@
 
 		<hr>
 
+		<p>I was born in southwest Serbia in town called Raska, near medieval serbian capital Ras.</p>
+
+		<div id="map" style="width:100%;height:400px;"></div>
+    <script>
+      function initMap() {
+        var myLatLng = { lat: 43.285695, lng: 20.615185 };
+
+        // Create a map object and specify the DOM element
+        // for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 10,
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Birth place',
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLkQ98U5YIOINz3p1_r135pA5bJApFwH4&callback=initMap"
+        async defer></script>
+
+		<hr>
+
+
 		<!-- Testimonials-->
 		<section class="testimonial">
 			<p>Some documents that you might find interesting</p>
